@@ -74,3 +74,26 @@ average_rating_model
 0:00:00.216066
 
 ```
+
+### The Movies Sample
+
+```
+random_model
+{'precision': 0.00029806259314456036, 'recall': 0.0001148782911077993, 'coverage': 6563}
+0:00:09.332523
+
+popularity_model
+{'precision': 0.15230998509687035, 'recall': 0.0669674592538896, 'coverage': 51}
+0:00:02.595473
+
+average_rating_model
+{'precision': 0.06721311475409836, 'recall': 0.03406928885197522, 'coverage': 36}
+0:00:01.943968
+
+knncf
+fit duration: 0:00:39.932602
+evaluate duration: 0:01:12.308072
+{'precision': 0.17564205457463886, 'recall': 0.14418837569962858, 'coverage': 980}
+
+
+```

@@ -41,5 +41,5 @@ def evaluate_cbf_models():
         results = evaluate(model, test, train=train)
         print(key)
         print(results)
-        print(datetime.datetime.now() - begin_time)
+        print('duration:', datetime.datetime.now() - begin_time)
         print()
