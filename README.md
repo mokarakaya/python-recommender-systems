@@ -129,7 +129,24 @@ evaluate duration: 0:00:15.556031
 - Test Parameters:
     - `test_percentage=0.01`
     - `lightFm epochs=50`
+
 ```
+
+random_model
+fit duration: 0:00:00.000006
+evaluate duration: 0:00:46.573553
+{'precision': 8.025682182985554e-05, 'recall': 4.0514261019878995e-05, 'coverage': 23288}
+
+popularity_model
+fit duration: 0:00:00.057120
+evaluate duration: 0:00:22.914063
+{'precision': 0.10383830134748878, 'recall': 0.07657024326573882, 'coverage': 53}
+
+average_rating_model
+fit duration: 0:00:00.105975
+evaluate duration: 0:00:22.557454
+{'precision': 0.0334805299076676, 'recall': 0.024321722041955977, 'coverage': 28}
+
 knncf
 fit duration: 0:00:39.932602
 evaluate duration: 0:01:12.308072

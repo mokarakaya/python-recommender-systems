@@ -22,7 +22,7 @@ def __run_parallel(arg):
 def _evaluate_parallel(model, test, train, k, test_percentage):
     input_full = [(user_id, row, model, train, k)
                   for user_id, row in enumerate(test) if test_percentage > np.random.random()]
-    results_par = Parallel(n_jobs=-1, verbose=1, backend="multiprocessing", max_nbytes='100M')(
+    results_par = Parallel(n_jobs=-1, verbose=0, backend="multiprocessing", max_nbytes='10M')(
         map(delayed(__run_parallel), input_full))
     precision = [x[0] for x in results_par if x is not None]
     recall = [x[1] for x in results_par if x is not None]
