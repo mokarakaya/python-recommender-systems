@@ -6,7 +6,7 @@ from scipy import sparse
 import datetime
 from baselines.random_model import RandomModel
 from baselines.popularity_based_model import PopularityBasedModel
-from baselines.avergate_rating_based_model import AverageRatingBasedModel
+from baselines.average_rating_based_model import AverageRatingBasedModel
 
 def get_models(df, user_key, item_key, rating_key):
     number_of_users = df[user_key].max()
