@@ -43,6 +43,9 @@ Benchmarking of recommender systems implemented with Python
 ### Movielens 100K
 
 - https://grouplens.org/datasets/movielens/100k/
+- ratings: 100,000 
+- users: 1,000 
+- items: 1,700 
 
 ```
 knncf
@@ -76,24 +79,66 @@ average_rating_model
 ```
 
 ### The Movies Sample
+- https://www.kaggle.com/rounakbanik/the-movies-dataset
+- ratings: 100,004 
+- users: 671 
+- items: 9,066 
+
+- Test Parameters:
+    - `parallel=False` 
+    - `test_percentage=1.0`
+    - `lightFm epochs=50`
 
 ```
+
 random_model
-{'precision': 0.00029806259314456036, 'recall': 0.0001148782911077993, 'coverage': 6563}
-0:00:09.332523
+fit duration: 0:00:00.000005
+evaluate duration: 0:00:09.505676
+{'precision': 0.0, 'recall': 0.0, 'coverage': 6560}
 
 popularity_model
-{'precision': 0.15230998509687035, 'recall': 0.0669674592538896, 'coverage': 51}
-0:00:02.595473
+fit duration: 0:00:00.000418
+evaluate duration: 0:00:02.757903
+{'precision': 0.1444776119402985, 'recall': 0.0657327267424566, 'coverage': 50}
 
 average_rating_model
-{'precision': 0.06721311475409836, 'recall': 0.03406928885197522, 'coverage': 36}
-0:00:01.943968
+fit duration: 0:00:00.001064
+evaluate duration: 0:00:02.060017
+{'precision': 0.058805970149253727, 'recall': 0.026759741755783988, 'coverage': 41}
 
+knncf
+fit duration: 0:00:00.311265
+evaluate duration: 0:00:07.023510
+{'precision': 0.14328358208955225, 'recall': 0.10561806997291268, 'coverage': 1029}
+
+LightFM
+fit duration: 0:00:03.881544
+evaluate duration: 0:00:15.556031
+{'precision': 0.17686567164179104, 'recall': 0.0854668048826362, 'coverage': 287}
+
+
+
+```
+
+### The Movies 
+- https://www.kaggle.com/rounakbanik/the-movies-dataset
+- ratings: 26M 
+- users: 270,000 
+- items: 45,000 
+
+- Test Parameters:
+    - `test_percentage=0.01`
+    - `lightFm epochs=50`
+```
 knncf
 fit duration: 0:00:39.932602
 evaluate duration: 0:01:12.308072
 {'precision': 0.17564205457463886, 'recall': 0.14418837569962858, 'coverage': 980}
 
+
+LightFM
+fit duration: 0:24:21.522301
+evaluate duration: 0:01:06.589433
+{'precision': 0.1636644762272903, 'recall': 0.10063789514006921, 'coverage': 618}
 
 ```
