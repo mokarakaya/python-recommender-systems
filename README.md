@@ -117,6 +117,12 @@ fit duration: 0:00:00.318135
 evaluate duration: 0:00:00.109589
 {'precision': 0.22499999999999998, 'recall': 0.15039344685242517, 'coverage': 68}
 
+svd
+fit duration: 0:00:00.150562
+evaluate duration: 0:00:00.081178
+{'precision': 0.29999999999999993, 'recall': 0.2408199643493761, 'coverage': 42}
+
+
 LightFM
 fit duration: 0:00:07.064765
 evaluate duration: 0:00:00.177218
@@ -161,6 +167,10 @@ fit duration: 0:00:39.932602
 evaluate duration: 0:01:12.308072
 {'precision': 0.17564205457463886, 'recall': 0.14418837569962858, 'coverage': 980}
 
+svd
+fit duration: 0:00:12.370896
+evaluate duration: 0:01:00.792134
+{'precision': 0.20692068429237948, 'recall': 0.17086245159235441, 'coverage': 677}
 
 LightFM
 fit duration: 0:24:21.522301
