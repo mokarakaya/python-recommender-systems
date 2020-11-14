@@ -1,10 +1,12 @@
-from collaborative_filtering.knncf import KnnCf
-import pandas as pd
-from evaluation.util import train_test_split
-from evaluation.evaluation_metrics import evaluate
-from scipy import sparse
-from collaborative_filtering.lightfm_model import LightFMModel
 import datetime
+
+from scipy import sparse
+
+from collaborative_filtering.SVD import SVD
+from collaborative_filtering.knncf import KnnCf
+from collaborative_filtering.lightfm_model import LightFMModel
+from evaluation.evaluation_metrics import evaluate
+from evaluation.util import train_test_split
 
 
 def get_models(df, user_key, item_key, rating_key):
@@ -12,8 +14,9 @@ def get_models(df, user_key, item_key, rating_key):
     numberOfItems = df[item_key].max()
     knncf = KnnCf(df[user_key].max(), df[item_key].max(), user_key, item_key, rating_key)
     lightfm = LightFMModel(numberOfUsers, numberOfItems, user_key, item_key, rating_key)
-    return {'knncf': knncf, 'LightFM': lightfm}
-    # return {'testing': lightfm}
+    svd = SVD(numberOfUsers, numberOfItems, user_key, item_key, rating_key)
+    return {'knncf': knncf, 'svd': svd, 'LightFM': lightfm}
+    # return {'testing': svd}
 
 def evaluate_cf_models(df, user_key, item_key, rating_key):
 
