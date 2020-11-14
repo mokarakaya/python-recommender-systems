@@ -48,33 +48,39 @@ Benchmarking of recommender systems implemented with Python
 - items: 1,700 
 
 ```
-knncf
-{'precision': 0.3026511134676564, 'recall': 0.1973564695756637, 'coverage': 199}
-0:00:02.954148
-
-LightFM
-{'precision': 0.32958642629904567, 'recall': 0.21420817457437155, 'coverage': 379}
-0:00:01.323856
-
-knncbf
-{'precision': 0.02617021276595745, 'recall': 0.013221324710552727, 'coverage': 782}
-0:00:02.073633
-
-knncfknncbf
-{'precision': 0.19830148619957538, 'recall': 0.11838370123290384, 'coverage': 365}
-duration: 0:00:04.430598
 
 random_model
-{'precision': 0.013723404255319151, 'recall': 0.005686367271034278, 'coverage': 1671}
-0:00:00.242194
+fit duration: 0:00:00.000005
+evaluate duration: 0:00:00.039267
+{'precision': 0.016666666666666666, 'recall': 0.023809523809523808, 'coverage': 59}
 
 popularity_model
-{'precision': 0.1945744680851064, 'recall': 0.11579070561413977, 'coverage': 47}
-0:00:00.435621
+fit duration: 0:00:00.000135
+evaluate duration: 0:00:00.063535
+{'precision': 0.15555555555555556, 'recall': 0.17614379084967322, 'coverage': 17}
 
 average_rating_model
-{'precision': 0.08021276595744681, 'recall': 0.0371801445252744, 'coverage': 35}
-0:00:00.216066
+fit duration: 0:00:00.000504
+evaluate duration: 0:00:00.044474
+{'precision': 0.05714285714285715, 'recall': 0.018059129810281883, 'coverage': 15}
+
+knncf
+fit duration: 0:00:00.050852
+evaluate duration: 0:00:00.056728
+{'precision': 0.2916666666666667, 'recall': 0.21612300586443792, 'coverage': 75}
+
+LightFM
+fit duration: 0:00:02.191592
+evaluate duration: 0:00:00.050887
+{'precision': 0.28125, 'recall': 0.20083162909449676, 'coverage': 104}
+
+knncbf
+{'precision': 0.011111111111111112, 'recall': 0.012345679012345678, 'coverage': 54}
+duration: 0:00:00.075490
+
+knncfknncbf
+{'precision': 0.13, 'recall': 0.14866946778711482, 'coverage': 70}
+duration: 0:00:00.165391
 
 ```
 
@@ -92,30 +98,33 @@ average_rating_model
 ```
 
 random_model
-fit duration: 0:00:00.000005
-evaluate duration: 0:00:09.505676
-{'precision': 0.0, 'recall': 0.0, 'coverage': 6560}
+fit duration: 0:00:00.000007
+evaluate duration: 0:00:00.115494
+{'precision': 0.0, 'recall': 0.0, 'coverage': 50}
 
 popularity_model
-fit duration: 0:00:00.000418
-evaluate duration: 0:00:02.757903
-{'precision': 0.1444776119402985, 'recall': 0.0657327267424566, 'coverage': 50}
+fit duration: 0:00:00.000231
+evaluate duration: 0:00:00.042300
+{'precision': 0.13999999999999999, 'recall': 0.030736714975845413, 'coverage': 20}
 
 average_rating_model
-fit duration: 0:00:00.001064
-evaluate duration: 0:00:02.060017
-{'precision': 0.058805970149253727, 'recall': 0.026759741755783988, 'coverage': 41}
+fit duration: 0:00:00.000599
+evaluate duration: 0:00:00.075318
+{'precision': 0.030000000000000006, 'recall': 0.009854700854700854, 'coverage': 16}
 
 knncf
-fit duration: 0:00:00.311265
-evaluate duration: 0:00:07.023510
-{'precision': 0.14328358208955225, 'recall': 0.10561806997291268, 'coverage': 1029}
+fit duration: 0:00:00.318135
+evaluate duration: 0:00:00.109589
+{'precision': 0.22499999999999998, 'recall': 0.15039344685242517, 'coverage': 68}
 
 LightFM
-fit duration: 0:00:03.881544
-evaluate duration: 0:00:15.556031
-{'precision': 0.17686567164179104, 'recall': 0.0854668048826362, 'coverage': 287}
+fit duration: 0:00:03.232557
+evaluate duration: 0:00:00.139283
+{'precision': 0.05000000000000001, 'recall': 0.01936026936026936, 'coverage': 30}
 
+tfidfcbf
+{'precision': 0.028571428571428574, 'recall': 0.015873015873015872, 'coverage': 54}
+duration: 0:00:01.002759
 
 
 ```

@@ -8,11 +8,11 @@ from evaluation.evaluate_baselines import evaluate_baseline_models
 import pandas as pd
 from datasets.data_reader import read_dataset
 
-# dataset = 'movielens100K'
-dataset = 'theMovies'
+dataset = 'movielens100K'
+# dataset = 'theMovies'
 
-df, user_key, item_key, rating_key = read_dataset(dataset)
+df, user_key, item_key, rating_key, df_items = read_dataset(dataset)
 evaluate_baseline_models(df, user_key, item_key, rating_key)
 evaluate_cf_models(df, user_key, item_key, rating_key)
-# evaluate_cbf_models()
-# evaluate_hybrid_models()
+evaluate_cbf_models(df, user_key, item_key, rating_key, df_items, dataset)
+evaluate_hybrid_models(df, user_key, item_key, rating_key, df_items, dataset)
