@@ -1,9 +1,11 @@
 from scipy import sparse
 from sklearn.metrics.pairwise import cosine_similarity
 import numpy as np
-import sys
-
-class KnnCf:
+from sklearn.feature_extraction.text import TfidfTransformer
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.metrics.pairwise import cosine_similarity
+import  sys
+class TfIdfCbf:
     def __init__(self, number_of_users, number_of_items, user_key, item_key, rating_key):
         self.number_of_users = number_of_users
         self.number_of_items = number_of_items
@@ -12,19 +14,23 @@ class KnnCf:
         self.rating_key = rating_key
         self.train = None
         self.similarities = None
+        self.items = None
 
-    def fit(self, train_df):
+    def fit(self, df_train, df_items):
+        content = df_items['overview'].reindex(range(df_items['overview'].index.max() + 1))
+        content = content.fillna('')
         self.train = sparse.coo_matrix(
-            (train_df[self.rating_key], (train_df[self.item_key], train_df[self.user_key])),
+            (df_train[self.rating_key], (df_train[self.item_key], df_train[self.user_key])),
             shape=(self.number_of_items+1, self.number_of_users+1)).tocsr()
-        self.similarities = cosine_similarity(self.train, dense_output=False)
+        vectorizer = TfidfVectorizer(stop_words='english')
+        tfidf_vectors = vectorizer.fit_transform(content)
+        self.similarities = cosine_similarity(tfidf_vectors, dense_output=False)
 
     def predict(self, user_id, method='sum'):
         if method == 'dot':
             items = self.train.transpose()[user_id].transpose().todense()
             prediction = self.similarities.dot(items)
-            prediction = np.asarray(prediction.reshape(1, -1))[0]
-            return prediction
+            return np.asarray(prediction.reshape(1, -1))[0]
         else:
             _, items, _ = sparse.find(self.train.transpose()[user_id])
             temp_sim = self.similarities[items]
