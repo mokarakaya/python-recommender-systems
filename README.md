@@ -65,14 +65,19 @@ evaluate duration: 0:00:00.044474
 {'precision': 0.05714285714285715, 'recall': 0.018059129810281883, 'coverage': 15}
 
 knncf
-fit duration: 0:00:00.050852
-evaluate duration: 0:00:00.056728
-{'precision': 0.2916666666666667, 'recall': 0.21612300586443792, 'coverage': 75}
+fit duration: 0:00:00.059505
+evaluate duration: 0:00:01.796871
+{'precision': 0.3032908704883227, 'recall': 0.19422919775972713, 'coverage': 234}
+
+svd
+fit duration: 0:00:00.040252
+evaluate duration: 0:00:00.323015
+{'precision': 0.2873673036093418, 'recall': 0.1972163950171332, 'coverage': 498}
 
 LightFM
-fit duration: 0:00:02.191592
-evaluate duration: 0:00:00.050887
-{'precision': 0.28125, 'recall': 0.20083162909449676, 'coverage': 104}
+fit duration: 0:00:02.520957
+evaluate duration: 0:00:00.515876
+{'precision': 0.333864118895966, 'recall': 0.21542940620606985, 'coverage': 431}
 
 knncbf
 {'precision': 0.011111111111111112, 'recall': 0.012345679012345678, 'coverage': 54}
@@ -113,20 +118,19 @@ evaluate duration: 0:00:00.075318
 {'precision': 0.030000000000000006, 'recall': 0.009854700854700854, 'coverage': 16}
 
 knncf
-fit duration: 0:00:00.318135
-evaluate duration: 0:00:00.109589
-{'precision': 0.22499999999999998, 'recall': 0.15039344685242517, 'coverage': 68}
+fit duration: 0:00:00.375383
+evaluate duration: 0:00:07.853654
+{'precision': 0.13805970149253732, 'recall': 0.09739439943770821, 'coverage': 1049}
 
 svd
-fit duration: 0:00:00.150562
-evaluate duration: 0:00:00.081178
-{'precision': 0.29999999999999993, 'recall': 0.2408199643493761, 'coverage': 42}
-
+fit duration: 0:00:00.136456
+evaluate duration: 0:00:04.259677
+{'precision': 0.2580597014925373, 'recall': 0.14664276460700815, 'coverage': 575}
 
 LightFM
-fit duration: 0:00:07.064765
-evaluate duration: 0:00:00.177218
-{'precision': 0.12857142857142856, 'recall': 0.05924908424908425, 'coverage': 44}
+fit duration: 0:00:12.044977
+evaluate duration: 0:00:16.021321
+{'precision': 0.18895522388059705, 'recall': 0.09311237907594277, 'coverage': 435}
 
 tfidfcbf
 {'precision': 0.028571428571428574, 'recall': 0.015873015873015872, 'coverage': 54}
