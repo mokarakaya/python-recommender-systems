@@ -93,7 +93,7 @@ duration: 0:00:00.165391
 - Test Parameters:
     - `parallel=False` 
     - `test_percentage=1.0`
-    - `lightFm epochs=50`
+    - `lightFm epochs=150`
 
 ```
 
@@ -118,9 +118,9 @@ evaluate duration: 0:00:00.109589
 {'precision': 0.22499999999999998, 'recall': 0.15039344685242517, 'coverage': 68}
 
 LightFM
-fit duration: 0:00:03.232557
-evaluate duration: 0:00:00.139283
-{'precision': 0.05000000000000001, 'recall': 0.01936026936026936, 'coverage': 30}
+fit duration: 0:00:07.064765
+evaluate duration: 0:00:00.177218
+{'precision': 0.12857142857142856, 'recall': 0.05924908424908425, 'coverage': 44}
 
 tfidfcbf
 {'precision': 0.028571428571428574, 'recall': 0.015873015873015872, 'coverage': 54}
